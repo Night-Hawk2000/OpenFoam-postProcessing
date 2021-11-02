@@ -6,10 +6,10 @@ import pandas as pd
 import openpyxl
 
 
-forces_file = os.path.join(os.getcwd()+ os.sep,"postProcessing" + os.sep ,"forces" +os.sep,"0" +os.sep,"moment.dat")
+moment_file = os.path.join(os.getcwd()+ os.sep,"postProcessing" + os.sep ,"forces" +os.sep,"0" +os.sep,"moment.dat")
 
-if not os.path.isfile(forces_file):
-        print("Forces file not found at "+forces_file)
+if not os.path.isfile(moment_file):
+        print("Moment file not found at "+moment_file)
         print( "Be sure that the case has been run and you have the right directory!")
         print ("Exiting.")
         sys.exit()
@@ -19,7 +19,7 @@ momentx = []
 momenty = []
 momentz = []
 
-with open(forces_file,"r") as datafile:
+with open(moment_file,"r") as datafile:
         for line in datafile:
                 if line[0] == "#":
                         continue
