@@ -6,7 +6,7 @@ import pandas as pd
 import openpyxl
 
 
-forces_file = "{}\\postProcessing\\forces\\0\\force.dat".format(os.getcwd())
+forces_file = os.path.join(os.getcwd()+ os.sep,"postProcessing" + os.sep ,"forces" +os.sep,"0" +os.sep,"force.dat")
 
 if not os.path.isfile(forces_file):
         print("Forces file not found at "+forces_file)
